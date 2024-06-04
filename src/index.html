@@ -4,8 +4,173 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Compilorama</title>
+  <link rel="preconnect" href="https://rsms.me/">
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <link href="/images/compilorama_32x32.png?v=1" rel="icon" type="image/x-icon">
+  <style>
+    :root {
+      font-family: Inter, sans-serif;
+      font-feature-settings: 'liga' 1, 'calt' 1;
+    }
+    @supports (font-variation-settings: normal) {
+      :root { font-family: InterVariable, sans-serif; }
+    }
+    html,
+    body {
+      margin: 0;
+      background-color: #E7EBF2;
+      color: #0F131A;
+      font-family: Inter, sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+    }
+    h1 {
+      text-align: center;
+      letter-spacing: -1px;
+    }
+    a {
+      color: #0A82f5;
+      font-weight: 500;
+      text-decoration: underline;
+      text-decoration-thickness: 0.09em;
+      text-underline-offset: 0.09em;
+    }
+    .c-hero {
+      position: relative;
+      background-color: #FFF;
+    }
+    .c-hero:after {
+      position: absolute;
+      content: '';
+      left: 0;
+      bottom: -40px;
+      height: 80px;
+      width: 100%;
+      background-color: #E7EBF2;
+      border-radius: 40px;
+    }
+    .c-container {
+      margin: 0 auto;
+      padding: 90px 40px 40px;
+      max-width: 600px;
+      box-sizing: border-box;
+    }
+    .c-tagline {
+      color: #7E838C;
+      text-align: center;
+    }
+    .c-products-list {
+      margin: 60px auto;
+      padding: 0;
+      list-style-type: none;
+    }
+    .c-products-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 20px;
+    }
+    .c-product-link {
+      margin: 0 auto;
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding: 10px 10px 10px 60px;
+      height: 60px;
+      max-width: 250px;
+      color: #0F131A;
+      background-color: #E7EBF2;
+      text-decoration: none;
+      transition: all 200ms ease-out;
+      border: 1px solid #E7EBF2;
+      border-radius: 8px;
+      box-sizing: border-box;
+      overflow: hidden;
+      outline: 0;
+    }
+    .c-product-logo {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+    .c-product-tag {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      padding: 4px;
+      background-color: #699AFB;
+      color: #FFF;
+      font-size: 12px;
+      text-transform: uppercase;
+      transform: translateY(-50%);
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    .c-footer {
+      position: relative;
+      color: #7E838C;
+      font-size: 12px;
+      text-align: center;
+      z-index: 10px;
+    }
+    @media screen and (min-width: 768px) {
+      .c-products-list {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 40px;
+      }
+      .c-product-link:hover,
+      .c-product-link:focus {
+        background-color: #F2F4F8;
+        transform: scale(110%);
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>Hello!</h1>
+  <div class="c-hero">
+    <div class="c-container">
+      <h1>Compilorama</h1>
+      <p class="c-tagline">
+        A software development company solely 
+        run by <a href="https://rafaelcamargo.com" target="_blank">Rafael Camargo</a>, 
+        the creator of some cool products.
+      </p>
+      <ul class="c-products-list">
+        <li>
+          <a class="c-product-link" href="https://veedgee.compilorama.com" target="_blank">
+            <img class="c-product-logo" src="/images/veedgee.svg?v=1" alt="Veedgee's Logo" width="40px" height="40px" />
+            Veedgee
+            <span class="c-product-tag">New</span>
+          </a>
+        </li>
+        <li>
+          <a class="c-product-link" href="https://gdemo.compilorama.com" target="_blank">
+            <img class="c-product-logo" src="/images/gdemo.svg?v=1" alt="Glorious Demo's Logo" width="40px" height="40px" />
+            Glorious Demo
+          </a>
+        </li>
+        <li>
+          <a class="c-product-link" href="https://pitsby.compilorama.com" target="_blank">
+            <img class="c-product-logo" src="/images/pitsby.svg?v=1" alt="Glorious Demo's Logo" width="40px" height="40px" />
+            Pitsby
+          </a>
+        </li>
+        <li>
+          <a class="c-product-link" href="https://taslonic.compilorama.com" target="_blank">
+            <img class="c-product-logo" src="/images/taslonic.svg?v=1" alt="Taslonic's Logo" width="40px" height="40px" />
+            Taslonic
+          </a>
+        </li>
+        <li>
+          <a class="c-product-link" href="https://typenik.compilorama.com" target="_blank">
+            <img class="c-product-logo" src="/images/typenik.svg?v=1" alt="Taslonic's Logo" width="40px" height="40px" />
+            Typenik
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="c-footer">
+    <p>© 2012-2024 Compilorama</p>
+  </div>
 </body>
 </html>

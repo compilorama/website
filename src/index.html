@@ -173,5 +173,33 @@
   <div class="c-footer">
     <p>© 2012-2024 Compilorama</p>
   </div>
+  <script>
+    (function(){
+      function init(){
+        if(statsEnabled()) {
+          const tag = document.createElement('script');
+          Object.entries(buildAttrs()).forEach(([key, value]) => tag.setAttribute(key, value))
+          document.body.appendChild(tag);
+        }
+      }
+      function statsEnabled(){
+        const params = new URLSearchParams(window.location.search);
+        return params.get('analytics') != 'disabled';
+      }
+      function buildAttrs(){
+        return {
+          async: '',
+          defer: '',
+          'data-website-id': buildStastaId(),
+          src: 'https://stasta.vercel.app/script.js'
+        };
+      }
+      function buildStastaId(){
+        const domain = window.location.host;
+        return domain == 'compilorama.com' ? '2943a502-ab47-48d8-b93e-ec4a31a84749' : '55e10142-d805-4338-9db5-d4197626755a';
+      }
+      init();
+    }());
+  </script>
 </body>
 </html>
